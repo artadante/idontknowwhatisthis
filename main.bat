@@ -101,15 +101,11 @@ cls
 CALL :LOGO
 for /f %%A in ('"prompt $H &echo on &for %%B in (1) do rem"') do set BS=%%A
 echo.
-echo   ╔═[ %LightPurple%1%RESET% ] ExitLag
+echo   ╔═══[ %LightPurple%1%RESET% ] ExitLag
 echo   ║ 
-@REM echo   ╠══(2) Wireshark 
-@REM echo   ║ 
-@REM echo   ╠═══(3) Virtualbox 
-@REM echo   ║ 
-echo   ╚╦══[ %LightPurple%2%RESET% ] Guide 
-@REM echo    ║ 
-set /p input=.%BS%   ╚══════^> 
+echo   ╠═══[ %LightPurple%2%RESET% ] Guide 
+echo   ║ 
+set /p input=.%BS%  ╚═══^> 
 if /I %input% EQU 1 GOTO Ex
 if /I %input% EQU 2 GOTO Guid
 
