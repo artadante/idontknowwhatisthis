@@ -106,18 +106,21 @@ if "%success%"=="true" (
 @REM echo.
 
 :Mainmenu
+cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
+del jq.exe
+cls
+CALL :LOGO
 for /f %%A in ('"prompt $H &echo on &for %%B in (1) do rem"') do set BS=%%A
 echo.
-echo.
-echo [38;2;255;255;0m        ╔═(1) Process Hacker 2[0m  
-echo [38;2;255;255;0m        ║[0m  
-echo [38;2;255;255;0m        ╠══(2) Wireshark[0m  
-echo [38;2;255;255;0m        ║[0m  
-echo [38;2;255;255;0m        ╠═══(3) Virtualbox[0m  
-echo [38;2;255;255;0m        ║[0m  
-echo [38;2;255;255;0m        ╚╦═══(4) Putty[0m  
-echo [38;2;255;255;0m         ║[0m  
-set /p input=.%BS% [38;2;255;255;0m        ╚══════^>[0m  
+echo   ╔═(1) Process Hacker 2 
+echo   ║ 
+echo   ╠══(2) Wireshark 
+echo   ║ 
+echo   ╠═══(3) Virtualbox 
+echo   ║ 
+echo   ╚╦═══(4) Putty 
+echo    ║ 
+set /p input=.%BS%    ╚══════^> 
 if /I %input% EQU 1 start ph2.lnk
 if /I %input% EQU 2 start Wireshark.lnk
 if /I %input% EQU 3 start vbox.lnk
