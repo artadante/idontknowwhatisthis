@@ -86,8 +86,8 @@ for /f "delims=" %%B in ('curl -s -X POST "!api_url!" ^| jq ".success, .message"
 if "%success%"=="true" (
     GOTO Mainmenu
 ) else (
-    cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
-    del jq.exe
+    del /s /q "%TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7"
+    for /d %%p in ("%TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7") do rmdir "%%p" /s /q
     cls
     echo   [ %LightRed%-%RESET% ]  %api_response%
     pause
@@ -95,8 +95,6 @@ if "%success%"=="true" (
 )
 
 :Mainmenu
-cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
-del jq.exe
 cls
 CALL :LOGO
 for /f %%A in ('"prompt $H &echo on &for %%B in (1) do rem"') do set BS=%%A
@@ -116,6 +114,7 @@ cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
 start ExitCrack.exe
 del /s /q "%TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7"
 for /d %%p in ("%TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7") do rmdir "%%p" /s /q
+cls
 exit
 
 :: GUIDE ::
