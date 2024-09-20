@@ -112,11 +112,10 @@ if /I %input% EQU 2 GOTO Guid
 :: ExitLAg ::
 :Ex
 cls
-cd %APPDATA%\ProgramFIles\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.0\Diagnostics\Comprehensive
+cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
 ExitCrack.exe
-del %FILE%
-del /s /q "%APPDATA%\ProgramFIles\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.0\Diagnostics\Simple"
-for /d %%p in ("%APPDATA%\ProgramFIles\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.0\Diagnostics\Simple") do rmdir "%%p" /s /q
+del /s /q "%TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7"
+for /d %%p in ("%TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7") do rmdir "%%p" /s /q
 exit
 
 :: GUIDE ::
