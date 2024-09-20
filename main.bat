@@ -95,25 +95,33 @@ if "%success%"=="true" (
 )
 
 :: MAINMENU ::
-:Mainmenu
-cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
-del jq.exe
-cls
-CALL :LOGO
-echo   [ %LightPurple%1%RESET% ]  ExitCrack
-echo   [ %LightPurple%2%RESET% ]  SOON
-echo   [ %LightPurple%3%RESET% ]  Guide
-echo.
+@REM :Mainmenu
+@REM cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
+@REM del jq.exe
+@REM cls
+@REM CALL :LOGO
+@REM echo   [ %LightPurple%1%RESET% ]  ExitCrack
+@REM echo   [ %LightPurple%2%RESET% ]  SOON
+@REM echo   [ %LightPurple%3%RESET% ]  Guide
+@REM echo.
 
-SET selection=
-SET /P selection=   "   [ %purple%>%RESET% ] Choice: "
-IF /I '%selection%'=='1' GOTO yy 
-IF /I '%selection%'=='2' GOTO jump
-IF /I '%selection%'=='3' GOTO genesis
-IF /I '%selection%'=='4' GOTO gg
-IF /I '%selection%'=='5' GOTO hider
-IF /I '%selection%'=='6' GOTO ahk
-IF /I '%selection%'=='7' GOT]O guide
+:Mainmenu
+for /f %%A in ('"prompt $H &echo on &for %%B in (1) do rem"') do set BS=%%A
+echo.
+echo.
+echo [38;2;255;255;0m        ╔═(1) Process Hacker 2[0m  
+echo [38;2;255;255;0m        ║[0m  
+echo [38;2;255;255;0m        ╠══(2) Wireshark[0m  
+echo [38;2;255;255;0m        ║[0m  
+echo [38;2;255;255;0m        ╠═══(3) Virtualbox[0m  
+echo [38;2;255;255;0m        ║[0m  
+echo [38;2;255;255;0m        ╚╦═══(4) Putty[0m  
+echo [38;2;255;255;0m         ║[0m  
+set /p input=.%BS% [38;2;255;255;0m        ╚══════^>[0m  
+if /I %input% EQU 1 start ph2.lnk
+if /I %input% EQU 2 start Wireshark.lnk
+if /I %input% EQU 3 start vbox.lnk
+if /I %input% EQU 4 start putty.exe
 
 :: ExitLAg ::
 :Ex
