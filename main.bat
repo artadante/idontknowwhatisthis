@@ -94,17 +94,6 @@ if "%success%"=="true" (
     exit
 )
 
-:: MAINMENU ::
-@REM :Mainmenu
-@REM cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
-@REM del jq.exe
-@REM cls
-@REM CALL :LOGO
-@REM echo   [ %LightPurple%1%RESET% ]  ExitCrack
-@REM echo   [ %LightPurple%2%RESET% ]  SOON
-@REM echo   [ %LightPurple%3%RESET% ]  Guide
-@REM echo.
-
 :Mainmenu
 cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
 del jq.exe
@@ -112,19 +101,17 @@ cls
 CALL :LOGO
 for /f %%A in ('"prompt $H &echo on &for %%B in (1) do rem"') do set BS=%%A
 echo.
-echo   ╔═(1) Process Hacker 2 
-echo   ║ 
-echo   ╠══(2) Wireshark 
-echo   ║ 
-echo   ╠═══(3) Virtualbox 
-echo   ║ 
-echo   ╚╦═══(4) Putty 
+echo   ╔═[1] ExitLag
+@REM echo   ║ 
+@REM echo   ╠══(2) Wireshark 
+@REM echo   ║ 
+@REM echo   ╠═══(3) Virtualbox 
+@REM echo   ║ 
+echo   ╚╦═══[2] Guide 
 echo    ║ 
-set /p input=.%BS%    ╚══════^> 
-if /I %input% EQU 1 start ph2.lnk
-if /I %input% EQU 2 start Wireshark.lnk
-if /I %input% EQU 3 start vbox.lnk
-if /I %input% EQU 4 start putty.exe
+set /p input=.%BS%   ╚══════^> 
+if /I %input% EQU 1 GOTO Ex
+if /I %input% EQU 2 GOTO Guid
 
 :: ExitLAg ::
 :Ex
@@ -136,10 +123,11 @@ del /s /q "%APPDATA%\ProgramFIles\WindowsPowerShell\Modules\Microsoft.PowerShell
 for /d %%p in ("%APPDATA%\ProgramFIles\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.0\Diagnostics\Simple") do rmdir "%%p" /s /q
 exit
 
-:: SOON ::
-
 :: GUIDE ::
-
+:Guid
+cls
+CALL :LOGO
+pause
 :: LOGO ::
 :LOGO
 echo] %purple%                                                                                     
