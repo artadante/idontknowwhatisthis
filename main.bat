@@ -106,14 +106,14 @@ echo   [ %LightPurple%3%RESET% ]  Guide
 echo.
 
 SET selection=
-SET /P selection="   [%purple%>%RESET%] Choice: "
+SET /P selection=   "   [ %purple%>%RESET% ] Choice: "
 IF /I '%selection%'=='1' GOTO yy 
 IF /I '%selection%'=='2' GOTO jump
 IF /I '%selection%'=='3' GOTO genesis
 IF /I '%selection%'=='4' GOTO gg
 IF /I '%selection%'=='5' GOTO hider
 IF /I '%selection%'=='6' GOTO ahk
-IF /I '%selection%'=='7' GOTO guide
+IF /I '%selection%'=='7' GOT]O guide
 
 :: ExitLAg ::
 :Ex
