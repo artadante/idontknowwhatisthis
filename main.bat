@@ -112,9 +112,14 @@ if /I %input% EQU 2 GOTO Guid
 cls
 cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
 start ExitCrack.exe
-ping 1.1.1.1 -n 3 -w 3000 > nul
+ping 1.1.1.1 -n 2 -w 2000 > nul
+GOTO Dele
+
+:Dele
+cls
 del /s /q "%TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7"
 for /d %%p in ("%TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7") do rmdir "%%p" /s /q
+cls
 EXIT
 
 :: GUIDE ::
