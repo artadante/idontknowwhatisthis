@@ -123,6 +123,7 @@ exit
 cls
 CALL :LOGO
 pause
+GOTO Mainmenu
 
 :: LOGO ::
 :LOGO
