@@ -105,11 +105,15 @@ echo   [ %LightPurple%2%RESET% ]  SOON
 echo   [ %LightPurple%3%RESET% ]  Guide
 echo.
 
-set input=%BS%
-set /p %BS%="[%purple%>%RESET%] Choice:"
-if /i %input% EQU 1 GOTO Ex
-if /i %input% EQU 2 GOTO Mainmenu
-if /i %input% EQU 3 GOTO Mainmenu
+SET selection=
+SET /P selection="   [%purple%>%RESET%] Choice: "
+IF /I '%selection%'=='1' GOTO yy 
+IF /I '%selection%'=='2' GOTO jump
+IF /I '%selection%'=='3' GOTO genesis
+IF /I '%selection%'=='4' GOTO gg
+IF /I '%selection%'=='5' GOTO hider
+IF /I '%selection%'=='6' GOTO ahk
+IF /I '%selection%'=='7' GOTO guide
 
 :: ExitLAg ::
 :Ex
