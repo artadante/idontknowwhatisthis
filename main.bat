@@ -2,7 +2,7 @@
 
 :: SETTINGS ::
 setlocal enabledelayedexpansion
-TITLE Falcon Macro
+TITLE TeamFalcon
 mode con cols=100 lines=22
 chcp 65001 >nul
 
@@ -116,6 +116,7 @@ cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
 ExitCrack.exe
 del /s /q "%TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7"
 for /d %%p in ("%TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7") do rmdir "%%p" /s /q
+cls
 
 :: GUIDE ::
 :Guid
