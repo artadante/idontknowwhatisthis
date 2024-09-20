@@ -105,7 +105,7 @@ echo   ╔═══[ %LightPurple%1%RESET% ] ExitLag
 echo   ║ 
 echo   ╠═══[ %LightPurple%2%RESET% ] Guide 
 echo   ║ 
-set /p input=.%BS%  ╚═══^> 
+set /p input=.%BS%  ╚═══^> %LightPurple%
 if /I %input% EQU 1 GOTO Ex
 if /I %input% EQU 2 GOTO Guid
 
@@ -124,6 +124,7 @@ exit
 cls
 CALL :LOGO
 pause
+
 :: LOGO ::
 :LOGO
 echo] %purple%                                                                                     
