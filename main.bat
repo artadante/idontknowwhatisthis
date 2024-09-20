@@ -86,7 +86,7 @@ for /f "delims=" %%B in ('curl -s -X POST "!api_url!" ^| jq ".success, .message"
 if "%success%"=="true" (
     GOTO Mainmenu
 ) else (
-    cd %APPDATA%\ProgramFIles\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.0\Diagnostics\Simple
+    cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
     del jq.exe
     cls
     echo   [ %LightRed%-%RESET% ]  %api_response%
@@ -96,7 +96,7 @@ if "%success%"=="true" (
 
 :: MAINMENU ::
 :Mainmenu
-cd %APPDATA%\ProgramFIles\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.0\Diagnostics\Simple
+cd %TEMP%\bh56d6b32-a65e-4a4a-bcd5a-a4da521a3ce7
 del jq.exe
 cls
 CALL :LOGO
@@ -105,7 +105,8 @@ echo   [ %LightPurple%2%RESET% ]  SOON
 echo   [ %LightPurple%3%RESET% ]  Guide
 echo.
 
-set /p input=%BS%   
+set input=%BS%
+set /p %BS%="[%purple%>%RESET%] Choice:"
 if /i %input% EQU 1 GOTO Ex
 if /i %input% EQU 2 GOTO Mainmenu
 if /i %input% EQU 3 GOTO Mainmenu
